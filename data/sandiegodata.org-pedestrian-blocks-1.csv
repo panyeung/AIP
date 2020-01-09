@@ -1,0 +1,51 @@
+Declare,metatab-latest
+Title,Pedestrian Density By Block and Time
+Description,"Pedestrian densities, based on data from San Diego's CityIQ system, aggregated"
+Description,"by city block, day of week and time of day."
+Identifier,02b2bdf0-62e1-4ac4-b6b5-51f4abc10533
+Name,sandiegodata.org-pedestrian-blocks-1
+Dataset,pedestrian
+Origin,sandiegodata.org
+Time,
+Space,
+Grain,
+Variant,blocks
+Version,1
+Created,2019-10-08T16:58:15
+Modified,2019-10-08T23:05:23
+Issued,2019-10-08T23:05:23
+Distribution,http://library.metatab.org/sandiegodata.org-pedestrian-blocks-1/metadata.csv
+Distribution,http://library.metatab.org/sandiegodata.org-pedestrian-blocks-1.zip
+Distribution,http://library.metatab.org/sandiegodata.org-pedestrian-blocks-1.csv
+Giturl,https://github.com/sandiegodata-projects/downtown-partnership.git
+""
+Section,Contacts,Email,Organization,Url
+Wrangler,Eric Busboom,eric@civicknowledge.com,Civic Knowledge,http://civicknowledge.com
+""
+Section,Documentation,Title,Description,
+Documentation,http://library.metatab.org/sandiegodata.org-pedestrian-blocks-1/README.md,README,,
+""
+Section,References,Name,Description,
+Reference,metapack+http://library.metatab.org/cityiq.io-pedestrians-san_diego-1.zip#pedestrians,pedestrians,,
+Reference,metapack+http://library.metatab.org/cityiq.io-objects-san_diego-5.zip#walkways,walkways,,
+Reference,shape+https://www2.census.gov/geo/pvs/tiger2010st/06_California/06073/tl_2010_06073_tabblock10.zip,blocks,2010 Census blocks for San Diego County,
+""
+Section,Resources,Name,Description,
+Datafile,http://library.metatab.org/sandiegodata.org-pedestrian-blocks-1/data/ped_blocks.csv,ped_blocks,"Pedestrian density per time by walkway, time of day and day of week",
+Datafile,http://library.metatab.org/sandiegodata.org-pedestrian-blocks-1/data/blocks.csv,blocks,Geographic data for San Diego city census blocks,
+""
+Section,Schema,DataType,Description,Has_Codes
+Table,blocks,,,
+Table.Column,geoid,string,Block geoid,
+Table.Column,geometry,string,Block geometry,
+Table,ped_blocks,,,
+Table.Column,geoid,string,Block geoid,
+Table.Column,dow,integer,Day of week,
+Table.Column,tod,string,Time of day,
+Table.Column,density,number,Pedestrian density,
+Table.Column,z,number,Density z-score,
+Table.Column,rank,number,Density percentile / rank,
+""
+Section,Sources,Name,Description,Hash
+Datafilesource,file:///Users/eric/proj/data-projects/downtown-partnership/datasets/sandiegodata.org-pedestrian-blocks/notebooks/aggregate.ipynb#ped_blocks,ped_blocks,"Pedestrian density per time by walkway, time of day and day of week",ee27e62d98e09e73b5b709d00ab630a0
+Datafilesource,file:///Users/eric/proj/data-projects/downtown-partnership/datasets/sandiegodata.org-pedestrian-blocks/notebooks/aggregate.ipynb#blocks,blocks,Geographic data for San Diego city census blocks,ee27e62d98e09e73b5b709d00ab630a0
